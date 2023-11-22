@@ -6,6 +6,9 @@
     <title>Página de médicos</title>
 </head>
 <style>
+    /*
+        Centramos nuestros items al centro del body de la página.
+    */
     body{
         background-color: #4dd0e1;
         display: flex;
@@ -24,6 +27,10 @@
         border-radius: 15px;
         margin-top: 10px;
     }
+    /*
+        Aqui se utilizo la etiqueta form para centrarlo en 
+        nuestra página web.
+    */
     form{
         display: flex;
         flex-direction: column;
@@ -39,6 +46,11 @@
         margin-top: 1px;
         text-align:center;
     }
+    /*
+        Aqui se utilizo la etiqueta input para centrarlo en 
+        nuestra página web. Además utilizamos box-shadow para
+        darle un contorno a cada márgen de color black.
+    */
     input{
         text-align: center;
         box-shadow: 2px 2px 2px 2px black;
@@ -46,6 +58,12 @@
         align-items: center;
         margin-bottom: 0;
     }
+    /*
+        Accedemos a la clase que almacena el input y además
+        de darle su acnho y largo, le damos un border-radius 
+        para darle un borde llamativo, y utilizamos cursor:pointer
+        es para que cuando acerque el indicador cambie de color.
+    */
     .btn-primary{
         width: 32%;
         height: 20%;
@@ -58,11 +76,20 @@
         background-color: blue;
         cursor: pointer;
     }
+    /*
+        Aqui se utilizo la opción hover me permite que cuando
+        la persona acerque el indicador este cambie de color. Y 
+        cambiará el color de la letra.
+    */
     .btn-primary:hover{
         color: black;
         background-color: yellow;
         box-shadow: 2px 2px 2px 2px blue;
     }
+    /*
+        Aqui se utilizo la opción last-child que me permite mantener
+        el márgen espaciado del botón hacía el input.
+    */
     .btn-primary:last-child{
         margin-right: 0;
     }
