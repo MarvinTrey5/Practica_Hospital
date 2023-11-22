@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de médicos</title>
     <style>
+        /*
+            Centramos todo lo que almacene el body junto con sus items
+        */
         body{
             background-color: #4dd0e1;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+        /*
+            Añadimos un titulo principal a todas las páginas
+            además le añadimos un borde interactivo, con sombra
+            al texto.
+        */
         h1{
             text-align: center;
             color: white;
@@ -23,6 +31,11 @@
             border-radius: 15px;
             margin-top: 10px;
         }
+        /*
+            De igual manera que las anteriores obtenemos la etiqueta botón
+            le asignamos la funcionalidad cursor:pointer. Al dar clic nos abrirá
+            una nueva página que será para ingresar un nuevo médico.
+        */
         button{
             width: 150%;
             height: 60%;
@@ -37,31 +50,56 @@
             cursor: pointer;
             margin-top: 10px;
         }
+        /*
+            Cuando se acerque se cambiará de color
+            con la utilización de hover.
+        */
         button:hover {
             color: black;
             background-color: yellow;
             box-shadow: 2px 2px 2px 2px blue;
         }
+        /*
+            Se mantiene el márgen entre el título 
+            y el botón.
+        */
         button:last-child {
             margin-right: 0;
         }
+        /*
+            Configuramos la tabla de médicos ingresados
+            le asignamos un borde y un márgen espaciado del
+            botón.
+        */
         table{
             border: 2px solid blue;
             margin-top: 10px;
         }
-        th, td {
+        /*
+            Aqui referenciamos los campos de nuestras tablas
+            tanto los encabezados que su letra es de color blanco
+            y el color de la celda es azul y el borde de color azul.
+        */
+        th,td{
             border: 3px solid blue;
             background-color: blue;
             color: white;
             font-family: monospace;
         }
+        /*
+            Para las filas se les da un color de fondo blanco
+            y si letra de color black. 
+        */
         tr {
             background-color: white;
             text-align: center;
             color: black;
             font-style: italic;
         }
-    
+        /*
+            Se cambia de color a las celdas de los datos 
+            obtenidos de nuestra base de datos.
+        */
         td {
             background-color: white;
             color: black;
@@ -74,6 +112,7 @@
     <table>
         <thead>
             <tr>
+                <!-- Se añaden todos los campos posibles para los encabezados -->
                 <th>ID_Medico</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -81,6 +120,8 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Se utiliza el ciclo for para recorrer datos almacenados en una 
+            lista, array. En este caso obtendremos los datos de los views, models formularios.-->
             {% for medico in lismed %}
             <tr>
                 <td>{{ medico.ID_Medico }}</td>
