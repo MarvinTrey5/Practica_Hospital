@@ -23,12 +23,22 @@
             border-radius: 15px;
             margin-top: 10px;
         }
+        /*
+            Aqui se utilizo la etiqueta form para centrarlo en 
+            nuestra página web.
+        */
         form{
             display: flex;
             flex-direction: column;
             align-items:center;
             width: 100%;
         }
+        /*
+            Aqui se utilizo la etiqueta label para centrarlo en 
+            nuestra página web, con su tipo de letra y
+            alineado al centro utilizamos text-shadow para
+            darle una sombra al texto.
+        */
         label{
             font-size: 18px;
             font-family: monospace;
@@ -38,6 +48,11 @@
             margin-top: 1px;
             text-align:center;
         }
+        /*
+            Aqui se utilizo la etiqueta input para centrarlo en 
+            nuestra página web. Además utilizamos box-shadow para
+            darle un contorno a cada márgen de color black.
+        */
         input{
             text-align: center;
             box-shadow: 2px 2px 2px 2px black;
@@ -45,6 +60,12 @@
             align-items: center;
             margin-bottom: 0;
         }
+        /*
+            Accedemos a la clase que almacena el input y además
+            de darle su acnho y largo, le damos un border-radius 
+            para darle un borde llamativo, y utilizamos cursor:pointer
+            es para que cuando acerque el indicador cambie de color.
+        */
         .btn-primary{
             width: 32%;
             height: 20%;
@@ -57,10 +78,19 @@
             background-color: #004d40;
             cursor: pointer;
         }
+        /*
+            Aqui se utilizo la opción fover me permite que cuando
+            la persona acerque el indicador este cambie de color. Y 
+            cambiará el color de la letra.
+        */
         .btn-primary:hover{
             color: antiquewhite;
             background-color: darkviolet;
         }
+        /*
+            Aqui se utilizo la opción last-child que me permite mantener
+            el márgen espaciado del botón hacía el input.
+        */
         .btn-primary:last-child{
             margin-right: 0;
         }
