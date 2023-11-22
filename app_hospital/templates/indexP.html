@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal Pacientes</title>
     <style>
+        /*
+            Centramos todo lo que almacene el body junto con sus items
+        */
         body{
             background-color: #e0f2f1;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+        /*
+            Añadimos un titulo principal a todas las páginas
+            además le añadimos un borde interactivo, con sombra
+            al texto.
+        */
         h1{
             color: white;
             background-color: #004d40;
@@ -23,6 +31,10 @@
             border-radius: 15px;
             margin-top: 10px;
         }
+        /*
+            De igual manera que las anteriores obtenemos la etiqueta botón
+            le asignamos la funcionalidad cursor:pointer.
+        */
         button{
             width: 150%;
             height: 60%;
@@ -38,11 +50,19 @@
             cursor: pointer;
             margin-top: 20px;
         }
+        /*
+            Cuando se acerque se cambiará de color
+            con la utilización de hover.
+        */
         button:hover{
             color: antiquewhite;
             background-color: darkviolet;
             box-shadow: 2px 2px 2px 2px black;
         }
+        /*
+            Se mantiene el márgen entre el título 
+            y el botón.
+        */
         button:last-child{
             margin-right: 0;
         }
