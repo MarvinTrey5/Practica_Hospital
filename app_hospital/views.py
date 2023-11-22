@@ -16,7 +16,7 @@ def add_med(request):
         formulario = fm.Add_medic(request.POST)
         if formulario.is_valid():
             nuevoreg = medico()
-            nuevoreg.Nombre = formulario.cleaned_data["nombre"]
+            nuevoreg.Nombre = formulario.cleaned_data["nombre"] # Utilice cleaned_data ya que asegura que los datos sean seguros y que cumplan lo del formulario.
             nuevoreg.Apellido = formulario.cleaned_data["apellido"]
             nuevoreg.Especialidad = formulario.cleaned_data["especialidad"]
             nuevoreg.save()
