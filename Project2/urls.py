@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app_hospital import views as appv
-
+# Url de las vistas de las páginas.
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',appv.index),
