@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body{
+            background-color: #4dd0e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            background-color: blue;
+            font-family: cursive;
+            font-size: 30px;
+            padding: 0.2em;
+            text-shadow: 2px 2px 5px black;
+            box-shadow: 2px 2px 2px 2px black;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+        button{
+            width: 150%;
+            height: 60%;
+            font-style:italic;
+            font-family: cursive;
+            font-size: 15px;
+            padding: 8px;
+            margin-left: auto;
+            border-radius: 1.5em;
+            box-shadow: 2px 2px 2px 2px black;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            color: black;
+            background-color: yellow;
+            box-shadow: 2px 2px 2px 2px blue;
+        }
+        button:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenidos Observarás La Lista de Médicos </h1>
+    <a href="{% url 'meds' %}"><button>Listas De Médicos</button></a>
+</body>
+</html>

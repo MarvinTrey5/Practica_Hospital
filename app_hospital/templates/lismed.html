@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de médicos</title>
+    <style>
+        body{
+            background-color: #4dd0e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            background-color: blue;
+            font-family: cursive;
+            font-size: 30px;
+            padding: 0.2em;
+            text-shadow: 2px 2px 5px black;
+            box-shadow: 2px 2px 2px 2px black;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+        button{
+            width: 150%;
+            height: 60%;
+            font-style:italic;
+            font-family: cursive;
+            font-size: 15px;
+            margin-left: 0;
+            border-radius: 1.5em;
+            box-shadow: 2px 2px 2px 2px black;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            color: black;
+            background-color: yellow;
+            box-shadow: 2px 2px 2px 2px blue;
+        }
+        button:last-child {
+            margin-right: 0;
+        }
+        table{
+            border: 2px solid blue;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 3px solid blue;
+            background-color: blue;
+            color: white;
+            font-family: monospace;
+        }
+        tr {
+            background-color: white;
+            text-align: center;
+            color: black;
+            font-style: italic;
+        }
+    
+        td {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1> Listas de médicos </h1>
+    <a href="{% url 'add_med' %}"><button>Agregar médico</button></a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID_Medico</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Especialidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medico in lismed %}
+            <tr>
+                <td>{{ medico.ID_Medico }}</td>
+                <td>{{ medico.Nombre }}</td>
+                <td>{{ medico.Apellido }}</td>
+                <td>{{ medico.Especialidad }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
